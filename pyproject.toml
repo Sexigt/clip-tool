@@ -43,6 +43,4 @@ Issues = "https://github.com/Sexigt/clip-tool/issues"
 
 [tool.setuptools]
 py-modules = ["main"]
-
-[tool.setuptools.include-package-data]
-true = true
+include-package-data = true
