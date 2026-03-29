@@ -41,11 +41,8 @@ Homepage = "https://github.com/Sexigt/clip-tool"
 Repository = "https://github.com/Sexigt/clip-tool"
 Issues = "https://github.com/Sexigt/clip-tool/issues"
 
-[project.scripts]
-clip-tool = "main:main"
-
 [tool.setuptools]
 py-modules = ["main"]
 
-[tool.setuptools.package-data]
-"" = ["audio/*.mp3"]
+[tool.setuptools.include-package-data]
+true = true
