@@ -28,8 +28,8 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Upload to GitHub Packages
+      - name: Upload to PyPI
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PAT_TOKEN }}
-        run: twine upload --repository-url https://pypi.pkg.github.com/sexigt dist/*
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: twine upload dist/*
