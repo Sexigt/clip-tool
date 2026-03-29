@@ -32,5 +32,4 @@ jobs:
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PAT_TOKEN }}
-          TWINE_REPOSITORY_URL: https://pypi.pkg.github.com/
-        run: twine upload --repository-url https://pypi.pkg.github.com/ dist/*
+        run: twine upload --repository-url https://pypi.pkg.github.com/sexigt dist/*
