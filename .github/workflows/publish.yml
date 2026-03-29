@@ -35,8 +35,8 @@ jobs:
           index-servers = github
 
           [github]
-          repository = https://pypi.pkg.github.com/
-          username = __token__
+          repository = https://pypi.pkg.github.com/sexigt/
+          username = sexigt
           password = TOKEN
           PYPIRC
           sed -i "s|TOKEN|${{ secrets.PAT_TOKEN }}|g" ~/.pypirc
