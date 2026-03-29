@@ -1,8 +1,10 @@
 name: Publish to GitHub Packages
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -30,5 +32,5 @@ jobs:
         env:
           TWINE_USERNAME: ${{ github.actor }}
           TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          TWINE_REPOSITORY_URL: https://upload.pkg.github.com/${{ github.repository_owner }}/
+          TWINE_REPOSITORY_URL: https://upload.pkg.github.com/${{ github.repository }}/
         run: twine upload dist/*
