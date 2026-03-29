@@ -1,0 +1,21 @@
+# clips and temp files
+clips/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# logs
+*.log
+*.log.bak
+
+# config (user-specific)
+clips/config.json
+
+# windows zone identifiers (download markers)
+*:Zone.Identifier
+
+# IDE
+.vscode/
+.idea/

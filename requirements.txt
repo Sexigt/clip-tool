@@ -1,0 +1,11 @@
+numpy
+opencv-python
+bettercam
+mss
+Pillow
+faster-whisper
+pyaudiowpatch
+pystray
+plyer
+customtkinter
+keyboard
