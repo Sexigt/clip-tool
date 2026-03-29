@@ -854,3 +854,6 @@ class App(ctk.CTk):
 
 if __name__ == "__main__":
     App().mainloop()
+
+def main():
+    App().mainloop()
