@@ -23,14 +23,14 @@ jobs:
           python-version: '3.12'
 
       - name: Install build tools
-        run: python -m pip install --upgrade pip build
+        run: python -m pip install --upgrade pip build twine
 
       - name: Build package
         run: python -m build
 
-      - name: Publish to GitHub Packages
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PAT_TOKEN }}
-          repository-url: https://pypi.pkg.github.com/
+      - name: Upload to GitHub Packages
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PAT_TOKEN }}
+          TWINE_REPOSITORY_URL: https://pypi.pkg.github.com/
+        run: twine upload --repository-url https://pypi.pkg.github.com/ dist/*
