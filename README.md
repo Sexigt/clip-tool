@@ -200,3 +200,13 @@ Lower the FPS or buffer duration if you experience memory pressure.
 ## License
 
 MIT
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=Sexigt%2Fclip-tool&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=Sexigt/clip-tool&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=Sexigt/clip-tool&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=Sexigt/clip-tool&type=date&legend=top-left" />
+ </picture>
+</a>
