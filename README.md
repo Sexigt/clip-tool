@@ -26,7 +26,24 @@
 
 ## Installation
 
-### 1. Install Python
+### Option A: Standalone EXE (Windows)
+
+Download the latest release from the [GitHub Releases](https://github.com/Sexigt/clip-tool/releases) page. No installation needed — just run the .exe file.
+
+### Option B: Install via pip
+
+```powershell
+pip install clip-tool
+```
+
+Then run:
+```powershell
+clip-tool
+```
+
+### Option C: Run from source
+
+#### 1. Install Python
 
 Download from [python.org](https://www.python.org/downloads/). Make sure to check **"Add Python to PATH"** during installation.
 
