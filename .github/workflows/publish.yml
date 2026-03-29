@@ -28,10 +28,19 @@ jobs:
       - name: Build package
         run: python -m build
 
-      - name: Publish to GitHub Packages
-        env:
-          TWINE_USERNAME: ${{ github.actor }}
-          TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          TWINE_REPOSITORY_URL: https://upload.pkg.github.com/${{ github.repository }}/
-        run: twine upload dist/*
+      - name: Configure .pypirc
+        run: |
+          cat > ~/.pypirc << 'PYPIRC'
+          [distutils]
+          index-servers = github
 
+          [github]
+          repository = https://pypi.pkg.github.com/OWNER
+          username = __token__
+          password = TOKEN
+          PYPIRC
+          sed -i "s|OWNER|${{ github.repository_owner }}|g" ~/.pypirc
+          sed -i "s|TOKEN|${{ secrets.GITHUB_TOKEN }}|g" ~/.pypirc
+
+      - name: Publish to GitHub Packages
+        run: twine upload -r github dist/*
