@@ -35,7 +35,7 @@ jobs:
           index-servers = github
 
           [github]
-          repository = https://pypi.pkg.github.com/sexigt/
+          repository = https://pypi.pkg.github.com
           username = sexigt
           password = TOKEN
           PYPIRC
