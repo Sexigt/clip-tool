@@ -1,4 +1,4 @@
-name: Publish to GitHub Packages
+name: Publish Package
 
 on:
   push:
@@ -34,3 +34,4 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           TWINE_REPOSITORY_URL: https://upload.pkg.github.com/${{ github.repository }}/
         run: twine upload dist/*
+
