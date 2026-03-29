@@ -35,11 +35,10 @@ jobs:
           index-servers = github
 
           [github]
-          repository = https://pypi.pkg.github.com/OWNER
+          repository = https://pypi.pkg.github.com/
           username = __token__
           password = TOKEN
           PYPIRC
-          sed -i "s|OWNER|${{ github.repository_owner }}|g" ~/.pypirc
           sed -i "s|TOKEN|${{ secrets.GITHUB_TOKEN }}|g" ~/.pypirc
 
       - name: Publish to GitHub Packages
