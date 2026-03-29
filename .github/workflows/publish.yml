@@ -39,7 +39,7 @@ jobs:
           username = __token__
           password = TOKEN
           PYPIRC
-          sed -i "s|TOKEN|${{ secrets.GITHUB_TOKEN }}|g" ~/.pypirc
+          sed -i "s|TOKEN|${{ secrets.PAT_TOKEN }}|g" ~/.pypirc
 
       - name: Publish to GitHub Packages
         run: twine upload -r github dist/*
